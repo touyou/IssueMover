@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Issue Mover",
+    "version": "1.0",
+    "description": "Make link to next and previous issue on GitHub.",
+    /*"default_locale": "ja_JP",*/
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": [
+                "https://github.com/*/*/issues/*"
+            ],
+            "js": [
+                "js/lib/jquery.min.js",
+                "js/main.js"
+            ]
+        }
+    ],
+    "icons": {
+        "128": "icon.png"
+    }
+}
